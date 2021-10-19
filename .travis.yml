@@ -1,0 +1,23 @@
+language: go
+
+sudo: false
+
+go:
+  - "1.15"
+  - tip
+
+env:
+  - GO111MODULE=on
+  # - CGO_ENABLED=0
+
+install: true
+
+before_script:
+  - go get ./...
+  - go vet ./...
+
+script:
+  - go test ./... -v -race -cover -coverprofile=profile.out -covermode=atomic
+after_script:
+  - cat profile.out >> coverage.txt
+  - bash <(curl -s https://codecov.io/bash)

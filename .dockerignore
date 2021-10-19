@@ -1,0 +1,12 @@
+.editorconfig
+.git
+.gitattributes
+.gitignore
+
+.DS_Store
+.idea
+.vscode
+
+stats.json
+*.md
+*.log*

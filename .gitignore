@@ -1,0 +1,14 @@
+.DS_Store
+.idea
+
+profile.out
+coverage.txt
+
+*.log*
+
+debug
+vendor
+
+go-api-boilerplate.code-workspace
+
+.history/
